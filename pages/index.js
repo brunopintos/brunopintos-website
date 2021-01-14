@@ -80,7 +80,7 @@ const MainContainer = styled.div`
   margin: auto;
   max-width: 600px;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
