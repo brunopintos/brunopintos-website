@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <Main>
       <Head>
         <title>Bruno Pintos</title>
         <link rel="icon" href="/favicon.ico" />
@@ -20,60 +20,74 @@ export default function Home() {
             Effectus Software
           </Company>{" "}
           — a mobile & web applications development agency. My favorite
-          technologies right now are: React.js, React Native, Typescript, GraphQL, Node.js,
-          and MongoDB.
+          technologies right now are: React.js, React Native, Typescript,
+          GraphQL, Node.js, and MongoDB.
         </Text>
         <SocialMediaImageContainer>
           <a
             href="https://www.linkedin.com/in/bruno-pintos-sugliano-5bba04154/"
             target="_blank"
           >
-            <SocialMediaImage src="/linkedin.png" alt="linkedin image" />
+            <MediaLink>
+              <SocialMediaImage src="/linkedin.png" alt="linkedin image" />
+            </MediaLink>
           </a>
           <a href="https://github.com/brunopintos" target="_blank">
-            <SocialMediaImage src="/github.png" alt="github image" />
+            <MediaLink>
+              <SocialMediaImage src="/github.png" alt="github image" />
+            </MediaLink>
           </a>
           <a href="https://twitter.com/brunopintos98" target="_blank">
-            <SocialMediaImage src="/twitter.png" alt="twitter image" />
+            <MediaLink>
+              <SocialMediaImage src="/twitter.png" alt="twitter image" />
+            </MediaLink>
           </a>
           <a href="mailto:brunopintos98@gmail.com" target="_blank">
-            <MailImageContainer>
-              <SocialMediaImage
-                style={{
-                  width: 28,
-                  borderRadius: 0,
-                }}
-                src="/mail.png"
-                alt="mail image"
-              />
-            </MailImageContainer>
+            <MediaLink>
+              <SocialMediaImage src="/mail.png" alt="mail image" />
+            </MediaLink>
           </a>
         </SocialMediaImageContainer>
       </MainContainer>
-    </div>
+    </Main>
   );
 }
 
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f51b5;
+  color: #fff;
+`;
+
 const Title = styled.h1`
-  margin: 0px;
+  margin-top: 12px;
   margin-bottom: 12px;
 `;
 
 const Subtitle = styled.h2`
   margin-top: 0px;
-  color: #3f51b5;
+  color: #9fa8da;
 `;
 
 const Text = styled.p`
   text-align: center;
-  margin-bottom: 40px;
   margin-left: 16px;
   margin-right: 16px;
+  line-height: 1.5em;
 `;
 
 const Company = styled.a`
-  color: #3f51b5;
+  color: #9fa8da;
   font-weight: 600;
+  transition: 0.3s;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      font-size: 1.05em;
+    }
+  }
 `;
 
 const MainContainer = styled.div`
@@ -93,27 +107,29 @@ const Image = styled.img`
 `;
 
 const SocialMediaImageContainer = styled.div`
-  width: 200px;
+  width: 280px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 40px;
 `;
 
 const SocialMediaImage = styled.img`
-  max-width: 40px;
-  border-radius: 50%;
+  height: 32px;
   cursor: pointer;
+  transition: 0.3s;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      height: 40px;
+    }
+  }
 `;
 
-const MailImageContainer = styled.div`
+const MediaLink = styled.div`
+  height: 40px;
+  width: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: black;
-  border-radius: 50%;
-  cursor: pointer;
 `;
