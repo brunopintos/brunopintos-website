@@ -13,6 +13,7 @@ export default function Home() {
       <MainContainer>
         <Title>Bruno Pintos</Title>
         <Subtitle>Software developer</Subtitle>
+        <Image src="/bruno.png" alt="profile image" />
         <Text>
           I live in Montevideo, Uruguay and work on{" "}
           <Company href="https://effectussoftware.com/" target="_blank">
@@ -22,7 +23,6 @@ export default function Home() {
           technologies right now are: React.js, Typescript, GraphQL, Node.js,
           and MongoDB.
         </Text>
-        <Image src="/bruno.png" alt="profile image" />
         <SocialMediaImageContainer>
           <a
             href="https://www.linkedin.com/in/bruno-pintos-sugliano-5bba04154/"
@@ -67,6 +67,8 @@ const Subtitle = styled.h2`
 const Text = styled.p`
   text-align: center;
   margin-bottom: 40px;
+  margin-left: 16px;
+  margin-right: 16px;
 `;
 
 const Company = styled.a`
@@ -96,7 +98,6 @@ const SocialMediaImageContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: 20px;
   margin-bottom: 40px;
 `;
 
