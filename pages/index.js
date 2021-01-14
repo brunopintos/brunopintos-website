@@ -11,20 +11,32 @@ export default function Home() {
       </Head>
 
       <MainContainer>
-        <h1>Bruno Pintos</h1>
+        <Title>Bruno Pintos</Title>
         <Subtitle>Software developer</Subtitle>
+        <Text>
+          I live in Montevideo, Uruguay and work on{" "}
+          <Company href="https://effectussoftware.com/" target="_blank">
+            Effectus Software
+          </Company>{" "}
+          — a mobile & web applications development agency. My favorite
+          technologies right now are: React.js, Typescript, GraphQL, Node.js,
+          and MongoDB.
+        </Text>
         <Image src="/bruno.png" alt="profile image" />
         <SocialMediaImageContainer>
-          <a href="https://www.linkedin.com/in/bruno-pintos-sugliano-5bba04154/">
+          <a
+            href="https://www.linkedin.com/in/bruno-pintos-sugliano-5bba04154/"
+            target="_blank"
+          >
             <SocialMediaImage src="/linkedin.png" alt="linkedin image" />
           </a>
-          <a href="https://github.com/brunopintos">
+          <a href="https://github.com/brunopintos" target="_blank">
             <SocialMediaImage src="/github.png" alt="github image" />
           </a>
-          <a href="https://twitter.com/brunopintos98">
+          <a href="https://twitter.com/brunopintos98" target="_blank">
             <SocialMediaImage src="/twitter.png" alt="twitter image" />
           </a>
-          <a href="mailto:brunopintos98@gmail.com">
+          <a href="mailto:brunopintos98@gmail.com" target="_blank">
             <MailImageContainer>
               <SocialMediaImage
                 style={{
@@ -42,13 +54,29 @@ export default function Home() {
   );
 }
 
+const Title = styled.h1`
+  margin: 0px;
+  margin-bottom: 12px;
+`;
+
 const Subtitle = styled.h2`
   margin-top: 0px;
-  margin-bottom: 40px;
   color: #3f51b5;
 `;
 
+const Text = styled.p`
+  text-align: center;
+  margin-bottom: 40px;
+`;
+
+const Company = styled.a`
+  color: #3f51b5;
+  font-weight: 600;
+`;
+
 const MainContainer = styled.div`
+  margin: auto;
+  max-width: 600px;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -69,6 +97,7 @@ const SocialMediaImageContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 40px;
 `;
 
 const SocialMediaImage = styled.img`
