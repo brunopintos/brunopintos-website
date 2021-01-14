@@ -20,7 +20,7 @@ export default function Home() {
             Effectus Software
           </Company>{" "}
           — a mobile & web applications development agency. My favorite
-          technologies right now are: React.js, Typescript, GraphQL, Node.js,
+          technologies right now are: React.js, React Native, Typescript, GraphQL, Node.js,
           and MongoDB.
         </Text>
         <SocialMediaImageContainer>
