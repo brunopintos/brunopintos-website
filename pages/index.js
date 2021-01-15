@@ -15,7 +15,7 @@ export default function Home() {
         <Subtitle>Software developer</Subtitle>
         <Image src="/bruno.png" alt="profile image" />
         <Text>
-          I live in Montevideo, Uruguay and work at{" "}
+          I live in Montevideo, Uruguay, and work at{" "}
           <Company href="https://effectussoftware.com/" target="_blank">
             Effectus Software
           </Company>{" "}
