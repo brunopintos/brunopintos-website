@@ -105,7 +105,7 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 `;
 
 const Title = styled.h1`
