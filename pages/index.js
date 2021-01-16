@@ -1,6 +1,5 @@
 import Head from "next/head";
-import styled from "styled-components";
-import Link from "next/link";
+import styled, { keyframes } from "styled-components";
 
 export default function Home() {
   return (
@@ -48,6 +47,40 @@ export default function Home() {
             </MediaLink>
           </a>
         </SocialMediaImageContainer>
+        <DownArrowContainer>
+          <DownArrow src="/down-arrow.png" alt="go down arrow" />
+        </DownArrowContainer>
+      </MainContainer>
+
+      <MainContainer>
+        <Title data-aos="fade-up" data-aos-offset="250">
+          Projects
+        </Title>
+        <Subtitle
+          style={{ marginTop: 20 }}
+          data-aos="fade-up"
+          data-aos-offset="298"
+        >
+          Ayp soft website
+        </Subtitle>
+        <a href="http://ayp.com.uy/" target="_blank">
+          <img
+            data-aos="fade-up"
+            data-aos-offset="250"
+            src="/aypweb.png"
+            alt="proyect ayp soft"
+            style={{ width: 400, cursor: "pointer" }}
+          />
+        </a>
+        <Text data-aos="fade-up" data-aos-offset="0">
+          I developed the website of{" "}
+          <Company href="http://ayp.com.uy/" target="_blank">
+            Ayp soft
+          </Company>{" "}
+          — an Uruguay-based company specialized in Enterprise Resource
+          Planning. For the project, I used the following technologies:
+          React.js, Next.js, and JavaScript
+        </Text>
       </MainContainer>
     </Main>
   );
@@ -62,8 +95,21 @@ const Main = styled.div`
   color: #fff;
 `;
 
+const MainContainer = styled.div`
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 80px;
+`;
+
 const Title = styled.h1`
-  margin-top: 12px;
+  margin-top: 0px;
   margin-bottom: 12px;
 `;
 
@@ -74,8 +120,6 @@ const Subtitle = styled.h2`
 
 const Text = styled.p`
   text-align: center;
-  margin-left: 16px;
-  margin-right: 16px;
   line-height: 1.5em;
 `;
 
@@ -85,20 +129,9 @@ const Company = styled.a`
   transition: 0.3s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      font-size: 1.05em;
+      color: white;
     }
   }
-`;
-
-const MainContainer = styled.div`
-  margin: auto;
-  max-width: 600px;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Image = styled.img`
@@ -107,12 +140,11 @@ const Image = styled.img`
 `;
 
 const SocialMediaImageContainer = styled.div`
-  width: 280px;
+  width: 240px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
-  margin-bottom: 40px;
 `;
 
 const SocialMediaImage = styled.img`
@@ -132,4 +164,26 @@ const MediaLink = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const move = keyframes`
+  0%, 100% {
+    bottom: 60px;
+  }
+  50% {
+    bottom: 75px;
+  }
+`;
+
+const DownArrowContainer = styled.div`
+  animation: ${move} 1s linear infinite;
+  position: absolute;
+  left: "50%";
+  bottom: 60px;
+`;
+
+const DownArrow = styled.img`
+  width: 40px;
+  position: relative;
+  left: "-50%";
 `;
