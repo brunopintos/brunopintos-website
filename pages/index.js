@@ -168,10 +168,10 @@ const MediaLink = styled.div`
 
 const move = keyframes`
   0%, 100% {
-    bottom: 60px;
+    bottom: 20px;
   }
   50% {
-    bottom: 75px;
+    bottom: 35px;
   }
 `;
 
@@ -179,7 +179,7 @@ const DownArrowContainer = styled.div`
   animation: ${move} 1s linear infinite;
   position: absolute;
   left: "50%";
-  bottom: 60px;
+  bottom: 20px;
 `;
 
 const DownArrow = styled.img`
