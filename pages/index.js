@@ -1,5 +1,7 @@
 import Head from "next/head";
 import styled, { keyframes } from "styled-components";
+import Projects from '../components/Projects.tsx';
+import Skills from '../components/Technologies.tsx';
 
 export default function Home() {
   return (
@@ -51,37 +53,8 @@ export default function Home() {
           <DownArrow src="/down-arrow.png" alt="go down arrow" />
         </DownArrowContainer>
       </MainContainer>
-
-      <MainContainer>
-        <Title data-aos="fade-up" data-aos-offset="250">
-          Projects
-        </Title>
-        <Subtitle
-          style={{ marginTop: 20 }}
-          data-aos="fade-up"
-          data-aos-offset="298"
-        >
-          Ayp soft website
-        </Subtitle>
-        <a href="http://ayp.com.uy/" target="_blank">
-          <img
-            data-aos="fade-up"
-            data-aos-offset="250"
-            src="/aypweb.png"
-            alt="proyect ayp soft"
-            style={{ width: 400, cursor: "pointer" }}
-          />
-        </a>
-        <Text data-aos="fade-up" data-aos-offset="0">
-          I developed the website of{" "}
-          <Company href="http://ayp.com.uy/" target="_blank">
-            Ayp soft
-          </Company>{" "}
-          — an Uruguay-based company specialized in Enterprise Resource
-          Planning. For the project, I used the following technologies:
-          React.js, Next.js, and JavaScript
-        </Text>
-      </MainContainer>
+      <Projects />
+      <Skills />
     </Main>
   );
 }
@@ -95,7 +68,7 @@ const Main = styled.div`
   color: #fff;
 `;
 
-const MainContainer = styled.div`
+export const MainContainer = styled.div`
   margin: auto;
   width: 100vw;
   height: 100vh;
@@ -108,22 +81,22 @@ const MainContainer = styled.div`
   padding-bottom: 120px;
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   margin-top: 0px;
   margin-bottom: 12px;
 `;
 
-const Subtitle = styled.h2`
+export const Subtitle = styled.h2`
   margin-top: 0px;
   color: #9fa8da;
 `;
 
-const Text = styled.p`
+export const Text = styled.p`
   text-align: center;
   line-height: 1.5em;
 `;
 
-const Company = styled.a`
+export const Company = styled.a`
   color: #9fa8da;
   font-weight: 600;
   transition: 0.3s;
