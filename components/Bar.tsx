@@ -28,7 +28,7 @@ const BackgroundBar = styled.div`
   border-radius: 15px;
   height: 30px;
   width: 100%;
-  margin: 12px 0;
+  margin-bottom: 12px;
 `;
 
 const ColorBar = styled.div`
