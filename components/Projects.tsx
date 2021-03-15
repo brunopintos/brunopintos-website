@@ -1,5 +1,6 @@
 import React from "react";
 import { MainContainer, Title, Subtitle, Text, Company } from "../pages/index";
+import styled from 'styled-components';
 
 const Projects = () => (
   <MainContainer>
@@ -14,12 +15,11 @@ const Projects = () => (
       Ayp soft website
     </Subtitle>
     <a href="http://ayp.com.uy/" target="_blank">
-      <img
+      <Image
         data-aos="fade-up"
         data-aos-offset="250"
         src="/aypweb.png"
         alt="proyect ayp soft"
-        style={{ width: 400, cursor: "pointer" }}
       />
     </a>
     <Text data-aos="fade-up" data-aos-offset="0">
@@ -33,5 +33,13 @@ const Projects = () => (
     </Text>
   </MainContainer>
 );
+
+const Image = styled.img`
+  max-width: 400px;
+  cursor: pointer;
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+`;
 
 export default Projects;

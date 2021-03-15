@@ -14,11 +14,17 @@ const Bar = ({
 }) => (
   <BackgroundBar>
     <ColorBar percentage={percentage}>
-      <Text>{name}</Text>
-      <Text>{getReadableYears(value)}</Text>
+      <CustomText>{name}</CustomText>
+      <CustomText>{getReadableYears(value)}</CustomText>
     </ColorBar>
   </BackgroundBar>
 );
+
+const CustomText = styled(Text)`
+  @media (max-width: 400px) {
+    font-size: 13px;
+  }
+`;
 
 const BackgroundBar = styled.div`
   display: flex;
