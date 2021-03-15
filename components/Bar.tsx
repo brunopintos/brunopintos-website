@@ -20,7 +20,7 @@ const Bar = ({
   </BackgroundBar>
 );
 
-const CustomText = styled(Text)`
+const CustomText = styled.p`
   @media (max-width: 400px) {
     font-size: 13px;
   }
