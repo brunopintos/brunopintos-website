@@ -1,32 +1,27 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Text } from "../pages/index";
-import { getReadableYears } from "../utils.ts";
+import { getReadableYears } from "../utils";
 
-const Bar = ({
-  name,
-  value,
-  percentage,
-}: {
-  name: string;
-  value: number;
-  percentage: number;
-}) => (
+const Bar = ({ name, value, percentage }) => (
   <BackgroundBar>
     <ColorBar percentage={percentage}>
-      <CustomText>{name}</CustomText>
+      <CustomText first>{name}</CustomText>
       <CustomText>{getReadableYears(value)}</CustomText>
     </ColorBar>
   </BackgroundBar>
 );
 
 const CustomText = styled.p`
+  position: absolute;
+  left: ${({first}) => first ? "12px" : "auto"};
+  right: ${({first}) => first ? "auto" : "12px"};
   @media (max-width: 400px) {
     font-size: 13px;
   }
 `;
 
 const BackgroundBar = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -45,8 +40,7 @@ const ColorBar = styled.div`
   background-color: #9fa8da;
   border-radius: 15px;
   height: 30px;
-  width: ${(props) => `calc(${props.percentage} * 100%)`};
-  padding: 0 12px;
+  width: ${({ percentage }) => `calc(${percentage} * 100%)`};
 `;
 
 export default Bar;

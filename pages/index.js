@@ -1,63 +1,62 @@
+import React from "react";
 import Head from "next/head";
 import styled, { keyframes } from "styled-components";
-import Projects from '../components/Projects.tsx';
-import Skills from '../components/Technologies.tsx';
+import Projects from "../components/Projects";
+import Skills from "../components/Technologies";
 
-export default function Home() {
-  return (
-    <Main>
-      <Head>
-        <title>Bruno Pintos</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => (
+  <Main>
+    <Head>
+      <title>Bruno Pintos</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 
-      <MainContainer>
-        <Title>Bruno Pintos</Title>
-        <Subtitle>Software developer</Subtitle>
-        <Image src="/bruno.png" alt="profile image" />
-        <Text>
-          I live in Montevideo, Uruguay, and work at{" "}
-          <Company href="https://effectussoftware.com/" target="_blank">
-            Effectus Software
-          </Company>{" "}
-          — a mobile & web applications development agency. My favorite
-          technologies right now are: React.js, React Native, Typescript,
-          GraphQL, Node.js, and MongoDB.
-        </Text>
-        <SocialMediaImageContainer>
-          <a
-            href="https://www.linkedin.com/in/bruno-pintos-sugliano-5bba04154/"
-            target="_blank"
-          >
-            <MediaLink>
-              <SocialMediaImage src="/linkedin.png" alt="linkedin image" />
-            </MediaLink>
-          </a>
-          <a href="https://github.com/brunopintos" target="_blank">
-            <MediaLink>
-              <SocialMediaImage src="/github.png" alt="github image" />
-            </MediaLink>
-          </a>
-          <a href="https://twitter.com/brunopintos98" target="_blank">
-            <MediaLink>
-              <SocialMediaImage src="/twitter.png" alt="twitter image" />
-            </MediaLink>
-          </a>
-          <a href="mailto:brunopintos98@gmail.com" target="_blank">
-            <MediaLink>
-              <SocialMediaImage src="/mail.png" alt="mail image" />
-            </MediaLink>
-          </a>
-        </SocialMediaImageContainer>
-        <DownArrowContainer>
-          <DownArrow src="/down-arrow.png" alt="go down arrow" />
-        </DownArrowContainer>
-      </MainContainer>
-      <Projects />
-      <Skills />
-    </Main>
-  );
-}
+    <MainContainer>
+      <Title>Bruno Pintos</Title>
+      <Subtitle>Software developer</Subtitle>
+      <Image src="/bruno.png" alt="profile image" />
+      <Text>
+        I live in Montevideo, Uruguay, and work at{" "}
+        <Company href="https://effectussoftware.com/" target="_blank">
+          Effectus Software
+        </Company>{" "}
+        — a mobile & web applications development agency. My favorite
+        technologies right now are: React.js, React Native, JavaScript, GraphQL,
+        Node.js, and MongoDB.
+      </Text>
+      <SocialMediaImageContainer>
+        <a
+          href="https://www.linkedin.com/in/bruno-pintos-sugliano-5bba04154/"
+          target="_blank"
+        >
+          <MediaLink>
+            <SocialMediaImage src="/linkedin.png" alt="linkedin image" />
+          </MediaLink>
+        </a>
+        <a href="https://github.com/brunopintos" target="_blank">
+          <MediaLink>
+            <SocialMediaImage src="/github.png" alt="github image" />
+          </MediaLink>
+        </a>
+        <a href="https://twitter.com/brunopintos98" target="_blank">
+          <MediaLink>
+            <SocialMediaImage src="/twitter.png" alt="twitter image" />
+          </MediaLink>
+        </a>
+        <a href="mailto:brunopintos98@gmail.com" target="_blank">
+          <MediaLink>
+            <SocialMediaImage src="/mail.png" alt="mail image" />
+          </MediaLink>
+        </a>
+      </SocialMediaImageContainer>
+      <DownArrowContainer>
+        <DownArrow src="/down-arrow.png" alt="go down arrow" />
+      </DownArrowContainer>
+    </MainContainer>
+    <Projects />
+    <Skills />
+  </Main>
+);
 
 const Main = styled.div`
   display: flex;
@@ -160,3 +159,5 @@ const DownArrow = styled.img`
   position: relative;
   left: "-50%";
 `;
+
+export default Home;
