@@ -6,7 +6,7 @@ const Bar = ({ name, value, percentage }) => (
   <BackgroundBar>
     <ColorBar percentage={percentage}>
       <CustomText first>{name}</CustomText>
-      <CustomText>{getReadableYears(value)}</CustomText>
+      <CustomText>{`${Math.floor(value)}+ years`}</CustomText>
     </ColorBar>
   </BackgroundBar>
 );
@@ -15,7 +15,8 @@ const CustomText = styled.p`
   position: absolute;
   left: ${({first}) => first ? "12px" : "auto"};
   right: ${({first}) => first ? "auto" : "12px"};
-  @media (max-width: 400px) {
+  margin: 0;
+  @media (max-width: 600px) {
     font-size: 13px;
   }
 `;

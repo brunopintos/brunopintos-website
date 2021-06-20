@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styled, { keyframes } from "styled-components";
 import Projects from "../components/Projects";
-import Skills from "../components/Technologies";
+import Technologies from "../components/Technologies";
 
 const Home = () => (
   <Main>
@@ -54,7 +54,7 @@ const Home = () => (
       </DownArrowContainer>
     </MainContainer>
     <Projects />
-    <Skills />
+    <Technologies />
   </Main>
 );
 
