@@ -14,7 +14,7 @@ const Home = () => (
     <MainContainer>
       <Title>Bruno Pintos</Title>
       <Subtitle>Software developer</Subtitle>
-      <Image src="/bruno.png" alt="profile image" />
+      <Image src="/bruno.jpg" alt="profile image" />
       <Text>
         I live in Montevideo, Uruguay, and work at{" "}
         <Company href="https://effectussoftware.com/" target="_blank">
