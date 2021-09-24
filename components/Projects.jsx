@@ -5,6 +5,23 @@ import { Title } from "../pages";
 
 const projects = [
   {
+    title: "Cooper's Hawk App",
+    link: "https://chwinery.com/",
+    image: {
+      src: "/ch.png",
+      alt: "Project Cooper's Hawk",
+    },
+    description: {
+      text1: "",
+      link: "https://chwinery.com/",
+      linkText: "Cooper's Hawk Winery & Restaurants",
+      text2:
+        " is an Illinois-based restaurant and winery chain with more than 40 locations, each including a full-service restaurant, tasting room, and retail store. I took part of the development of it's app, that included Location of the restaurants, Reservations, Gifting bottles, Menu, and more.",
+      text3:
+        "To do this we used React Native front-end and integrated with already built in back-end. I was front-end developer taking many features.",
+    },
+  },
+  {
     title: "Figo Pet Insurance App",
     link: "https://figopetinsurance.com/",
     image: {
@@ -18,11 +35,11 @@ const projects = [
       text2:
         " is a Chicago-based company that serves for pet owners to improve communication with Vets around the globe. The main feature built included the creation of a chat for their React Native app to accelerate the live communication. This included real-time communication, history of chats, notifications, and ratings.",
       text3:
-        "To do this we used SignalR and integrated with Mix Panel. I was front-end lead developer talking all major features.",
+        "To reach this live communication, we integrated with SignalR. I was front-end lead developer taking all major features.",
     },
   },
   {
-    title: "JShip",
+    title: "JShip website",
     link: "https://jship.com/",
     image: {
       src: "/jship.png",
@@ -83,6 +100,7 @@ export default Projects;
 const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   height: auto;
   gap: 40px;
   @media (max-width: 1250px) {
