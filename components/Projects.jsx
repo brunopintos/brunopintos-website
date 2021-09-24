@@ -16,9 +16,9 @@ const projects = [
       link: "https://chwinery.com/",
       linkText: "Cooper's Hawk Winery & Restaurants",
       text2:
-        " is an Illinois-based restaurant and winery chain with more than 40 locations, each including a full-service restaurant, tasting room, and retail store. I took part of the development of it's app, that included Location of the restaurants, Reservations, Gifting bottles, Menu, and more.",
+        " is an Illinois-based restaurant and winery chain with more than 40 locations, each including a full-service restaurant, tasting room, and retail store. I took part in the development of its app, which included the Location of the restaurants, Reservations, Gifting bottles, Menu, and more.",
       text3:
-        "To do this we used React Native front-end and integrated with already built in back-end. I was front-end developer taking many features.",
+        "To do this, we used a React Native front-end and integrated it with an already built back-end. I was front-end developer.",
     },
   },
   {
@@ -100,10 +100,13 @@ export default Projects;
 const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 1fr;
   height: auto;
   gap: 40px;
-  @media (max-width: 1250px) {
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     max-width: 600px;
   }
