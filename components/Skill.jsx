@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const Skill = ({ images, title, text, key }) => (
+const Skill = ({ images, title, text }) => (
   <Container
-    key={key}
     style={{
       display: "flex",
       flexDirection: "column",
@@ -15,6 +14,7 @@ const Skill = ({ images, title, text, key }) => (
     <ImagesContainer>
       {images.map((image) => (
         <img
+          key={image}
           src={image}
           alt={image.split(".")[0]}
           style={{
