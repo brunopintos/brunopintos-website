@@ -60,7 +60,7 @@ const skills = [
     ],
     level: 8,
     title: "Management Tools",
-    text: "As a really important part of the software development process, the management tools were always there for me. I used others, but in most projects I have been working with Jira or Trello and consider them to be the best. They allow many integrations, with applications for tracking time, design tools and online repositories."
+    text: "As a really important part of the software development process, the management tools were always there for me. I used others, but on most projects, I have been working with Jira or Trello and consider them the best. Allowing many integrations (time-tracking apps, design tools, online repositories, etc.) makes them great management tools."
   },
   {
     images: [
@@ -69,7 +69,7 @@ const skills = [
     ],
     level: 4,
     title: "Other JS Frameworks",
-    text: "I also had the chance to work with Electron, a cross platform desktop-app framework based in Node. And with Phaser, which is a javascript game framework."
+    text: "I also had the opportunity to work with Electron, a cross-platform desktop application framework based on Node. And with Phaser, which is a Javascript game framework."
   },
 ];
 
