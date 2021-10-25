@@ -1,5 +1,5 @@
 import React from "react";
-import { Subtitle, Text, Company } from "../pages/index";
+import { Subtitle, Text, LinkText } from "../pages/index";
 import styled from "styled-components";
 
 const Project = ({ title, link, image, description }) => (
@@ -13,9 +13,9 @@ const Project = ({ title, link, image, description }) => (
     <div>
       <Text>
         {description.text1}
-        <Company href={description.link} target="_blank">
+        <LinkText href={description.link} target="_blank">
           {description.linkText}
-        </Company>
+        </LinkText>
         {description.text2}
       </Text>
       <Text>{description.text3}</Text>

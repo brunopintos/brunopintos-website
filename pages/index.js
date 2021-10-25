@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styled, { keyframes } from "styled-components";
 import Projects from "../components/Projects";
-import Technologies from "../components/Technologies";
+import Skills from "../components/Skills";
 
 const Home = () => (
   <Main>
@@ -16,13 +16,15 @@ const Home = () => (
       <Subtitle>Software developer</Subtitle>
       <Image src="/bruno.jpg" alt="profile image" />
       <Text>
-        I live in Montevideo, Uruguay, and work at{" "}
-        <Company href="https://effectussoftware.com/" target="_blank">
+        I live in {" "}
+        <LinkText href="https://goo.gl/maps/atxUPxPFbGdjpzmK6" target="_blank">
+          Montevideo, Uruguay
+        </LinkText>
+        , and work at{" "}
+        <LinkText href="https://effectussoftware.com/" target="_blank">
           Effectus Software
-        </Company>{" "}
-        — a mobile & web applications development agency. My favorite
-        technologies right now are: React.js, React Native, JavaScript, GraphQL,
-        Node.js, and MongoDB.
+        </LinkText>{" "}
+        — a mobile & web applications development agency.
       </Text>
       <SocialMediaImageContainer>
         <a
@@ -54,7 +56,7 @@ const Home = () => (
       </DownArrowContainer>
     </MainContainer>
     <Projects />
-    <Technologies />
+    <Skills />
   </Main>
 );
 
@@ -95,7 +97,7 @@ export const Text = styled.p`
   line-height: 1.5em;
 `;
 
-export const Company = styled.a`
+export const LinkText = styled.a`
   color: #9fa8da;
   font-weight: 600;
   transition: 0.3s;

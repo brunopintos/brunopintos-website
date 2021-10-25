@@ -1,12 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
-import { getReadableYears } from "../utils";
 
 const Bar = ({ name, value, percentage }) => (
   <BackgroundBar>
     <ColorBar percentage={percentage}>
       <CustomText first>{name}</CustomText>
-      <CustomText>{`${Math.floor(value)}+ years`}</CustomText>
+      <CustomText>{value}</CustomText>
     </ColorBar>
   </BackgroundBar>
 );
