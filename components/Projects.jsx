@@ -98,18 +98,11 @@ const Projects = () => {
 export default Projects;
 
 const ProjectsGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 1fr;
-  height: auto;
-  gap: 40px;
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-  }
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const Main = styled.div`

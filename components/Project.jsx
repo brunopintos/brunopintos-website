@@ -43,6 +43,10 @@ const Main = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
 `;
 
 export default Project;
